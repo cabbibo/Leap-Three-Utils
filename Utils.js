@@ -99,3 +99,18 @@ LeapUtils.leapToScreen = function( position , frame , w , h  ){
   return [ x*w , y*h ];
 
 }
+
+LeapUtils.extendedFingers( object ){
+
+  var extended = [];
+
+  for( var i = 0; i < object.fingers.length; i++ ){
+
+    var finger = object.fingers[i];
+    if( finger.extended ) extended.push( finger );
+
+  }
+
+  return extended;
+
+}
